@@ -32,7 +32,7 @@ public class MessageController {
 	@RequestMapping(value = "/message/", produces = { "application/json;charset=utf-8" }, method = RequestMethod.GET)
 	public Message getMessage() {
 		Message msg = messageService.findMessage();
-		new MyMqttClient().runClient(msg);
+		
 		return msg;
 	}
 

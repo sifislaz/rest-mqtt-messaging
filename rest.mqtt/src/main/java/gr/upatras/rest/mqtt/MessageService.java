@@ -23,6 +23,7 @@ public class MessageService implements IMessageService{
 	 */
 	@Override
 	public Message findMessage() {
+		new MyMqttClient().runClient(message);
 		return message;
 	}
 	

@@ -20,21 +20,21 @@ public class MessageController {
 
 	private static final Logger log = LoggerFactory.getLogger(MessageController.class);
 
-	@ApiOperation(value = "Gets message", notes = "This operation retrieves message", response = Message.class)
-	@ApiResponses(value = { @ApiResponse(code = 200, message = "Success", response = Message.class),
-			@ApiResponse(code = 400, message = "Bad Request", response = Error.class),
-			@ApiResponse(code = 401, message = "Unauthorized", response = Error.class),
-			@ApiResponse(code = 403, message = "Forbidden", response = Error.class),
-			@ApiResponse(code = 404, message = "Not Found", response = Error.class),
-			@ApiResponse(code = 405, message = "Method Not allowed", response = Error.class),
-			@ApiResponse(code = 409, message = "Conflict", response = Error.class),
-			@ApiResponse(code = 500, message = "Internal Server Error", response = Error.class) })
-	@RequestMapping(value = "/message/", produces = { "application/json;charset=utf-8" }, method = RequestMethod.GET)
-	public Message getMessage() {
-		Message msg = messageService.findMessage();
-		
-		return msg;
-	}
+//	@ApiOperation(value = "Gets message", notes = "This operation retrieves message", response = Message.class)
+//	@ApiResponses(value = { @ApiResponse(code = 200, message = "Success", response = Message.class),
+//			@ApiResponse(code = 400, message = "Bad Request", response = Error.class),
+//			@ApiResponse(code = 401, message = "Unauthorized", response = Error.class),
+//			@ApiResponse(code = 403, message = "Forbidden", response = Error.class),
+//			@ApiResponse(code = 404, message = "Not Found", response = Error.class),
+//			@ApiResponse(code = 405, message = "Method Not allowed", response = Error.class),
+//			@ApiResponse(code = 409, message = "Conflict", response = Error.class),
+//			@ApiResponse(code = 500, message = "Internal Server Error", response = Error.class) })
+//	@RequestMapping(value = "/message/", produces = { "application/json;charset=utf-8" }, method = RequestMethod.GET)
+//	public Message getMessage() {
+//		Message msg = messageService.findMessage();
+//		
+//		return msg;
+//	}
 
 	@ApiOperation(value = "Creates a Message", notes = "This operation creates a Message entity.", response = Message.class)
 	@ApiResponses(value = {

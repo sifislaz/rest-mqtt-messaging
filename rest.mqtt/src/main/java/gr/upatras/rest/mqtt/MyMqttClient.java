@@ -21,11 +21,11 @@ public class MyMqttClient implements MqttCallback {
 	
 // the following two flags control whether this example is a publisher, a
 // subscriber or both
-	static final Boolean subscriber = false;
+	static final Boolean subscriber = true;
 	static final Boolean publisher = true;
 	
 	private static final Logger log = LoggerFactory.getLogger(MyMqttClient.class);
-	public static final String TOPIC = "grupatras/lab/engine/temperature/1066472";
+	public static final String TOPIC = "grupatras/lab/ex3/1066472";
 
 	/**
 	 *
